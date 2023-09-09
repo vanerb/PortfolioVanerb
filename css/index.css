@@ -1,0 +1,269 @@
+.text-anim{
+   
+    margin: auto;
+    display: block;
+    font-family: 'Share Tech Mono', monospace;
+    height: 20px;
+}
+.container{
+    overflow: hidden;
+    
+}
+
+p{
+    font-family: 'Mukta', sans-serif;
+}
+
+button{
+    font-family: 'Share Tech Mono', monospace;
+}
+
+h1{
+    font-family: 'Kanit', sans-serif;
+    text-transform: uppercase;
+    color:azure
+}
+
+p{
+    color: azure;
+}
+
+
+
+.container-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-description button{
+    background-color: white;
+    border: 1px black solid;
+    color: black;
+}
+
+
+
+.content-title{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.content-body{
+    background-color: #C1E5FF;
+    padding-bottom: 10px;
+    
+}
+
+.content-body p{
+    color: black;
+}
+
+.mouse{
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el contenido del pie de página */
+    align-items: flex-end;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+   animation: fadeIn;
+    animation-duration: 2s;
+}
+.mouseY{
+    width: 20px;
+    height: 30px;
+    border: 2px black solid;
+    border-radius: 20px 20px;
+    
+    
+}
+
+.lineaMouse{
+    width: 1px;
+    height: 8px;
+    border: 2px black solid;
+    border-radius: 20px 20px;
+    margin: 2px auto;
+    display: block;
+    animation: mouse 2s linear infinite ;
+}
+
+@keyframes mouse{
+    0% { opacity: 0; }
+    10% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(8px); opacity: 0;}
+  }
+
+.wave-container {  
+    height: 0vh;
+    background-color: rgba(32, 178, 170, 0);
+    position: relative;
+  }
+  
+  .wave-container::before {   
+    content: "";
+    width: 100%;
+    height: 122px;
+    position: absolute;
+    bottom: -0.3%;
+    left: 0;
+    background-size: auto;
+    background-repeat: repeat no-repeat;
+    background-position: 20vw bottom;
+    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200  134' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 98L50 92C100 86 200 74 300 50C400 26 500 -10 600 2C700 14 800 74 900 98C1000 122 1100 110 1150 104L1200 98V134H1150C1100 134 1000 134 900 134C800 134 700 134 600 134C500 134 400 134 300 134C200 134 100 134 50 134H0V98Z' fill='%23c1e5ff'/></svg>");
+
+    animation: wave 10s linear infinite alternate-reverse;
+}
+  
+  @media(max-width:850px) {
+    .wave-container::before {    
+      height: 61px
+    }  
+  }
+
+  .wave-container-anim{
+    animation: wave 10s linear infinite alternate-reverse;
+  }
+
+  @keyframes wave-fixed{
+    from{
+        background-position: 0, 0;
+    }
+    to{
+        background-position: 100% 100%;
+    }
+  }
+
+  @keyframes wave{
+    from{
+        background-position: 0, 0;
+    }
+    to{
+        background-position: 100% 100%;
+    }
+  }
+
+
+
+
+
+  body{
+    background: #4568DC;  
+    background: linear-gradient(to right, #845EC2, #2C73D2, #0081CF,#0089BA, #008E9B, #008F7A); 
+    background-size: 200% 200%;
+    animation: mov 3s linear infinite alternate;
+}
+
+
+@keyframes mov{
+    from{
+        background-position: 0, 0;
+    }
+    to{
+        background-position: 100% 100%;
+    }
+}
+
+  
+
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    width: 50%; /* Ancho del 50% */
+    height: 2px; /* Grosor de la línea */
+    bottom: 0;
+    left: 15%; /* Centra la línea al texto (50% - 50% / 2) */
+    background-color: #000; /* Color de la línea */
+    transform: scaleX(0); /* Inicialmente, la línea estará invisible */
+    transform-origin: bottom right;
+    transition: transform 0.3s ease; /* Efecto de transición suave */
+  }
+  
+  .nav-link:hover::after {
+    transform: scaleX(1); /* Muestra la línea al pasar el cursor sobre el elemento */
+  }
+
+  .nav-link{
+    text-decoration: none; /* Elimina la línea subrayada predeterminada */
+    position: relative; /* Necesario para el posicionamiento absoluto */
+    display: inline-block; /* Para que el elemento ocupe solo el ancho de su contenido */
+    padding-bottom: 2px;
+    color: #000;
+    font-family: 'Share Tech Mono', monospace;
+    margin: 5px;
+  }
+
+  .container-title h1{
+    font-size: 55px;
+    animation: flipInY; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s;
+  }
+
+  .container-title p{
+    font-size: 20px;
+    animation: zoomIn; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s;
+  }
+
+  .container-title button{
+    animation: fadeIn;
+    animation-duration: 2s;
+  }
+
+
+  .perfil{
+    border: 5px solid rgb(163, 191, 250);
+    border-radius: 50%;
+    
+
+  }
+
+  .proyectos .portfolio-item{
+    text-align: center;
+    padding: 20px;
+  }
+
+  .proyectos .portfolio-item button{
+    display: block;
+    margin: auto;
+    background-color: transparent;
+    border: 1px solid black;
+    font-family: 'Share Tech Mono', monospace;
+    
+  }
+
+  .proyectos .portfolio-item:hover{
+    
+    animation: pulse ;
+    animation-duration: 1s;
+    
+  }
+
+  .proyectos .portfolio-item button:hover{
+    display: block;
+    margin: auto;
+    background-color: white;
+    border: 1px solid black;
+    color: #000;
+    font-family: 'Share Tech Mono', monospace;
+  }
+
+  
