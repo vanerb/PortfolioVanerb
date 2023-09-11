@@ -1,3 +1,5 @@
+
+
 .text-anim{
    
     margin: auto;
@@ -11,7 +13,8 @@
 }
 
 p{
-    font-family: 'Mukta', sans-serif;
+  font-family: 'Roboto Mono', monospace;
+  color: azure;
 }
 
 button{
@@ -24,9 +27,43 @@ h1{
     color:azure
 }
 
-p{
-    color: azure;
+.linea{
+  border-right: 2px solid black;
+  height: 100px;
+  width: 1px;
+  padding: 0;
+  margin: 30px auto 0 auto;
+
 }
+
+.nolinea{
+  
+  height: 100px;
+  width: 1px;
+  padding: 0;
+  margin: 30px auto 0 auto;
+
+}
+
+.circulo{
+  width: 40px;
+  height: 40px;
+  border: 2px #0089BA solid;
+  box-shadow:  0 0 0 0.2em #008E9B;
+  border-radius: 50%;
+  margin-top: -40px;
+  margin-left: -20px;
+  background-color: #0081CF;
+ animation: circulo 2s linear infinite ;
+
+}
+
+@keyframes circulo{
+  0% { border: 2px #0089BA solid; background-color: #0081CF;  box-shadow:  0 0 0 0.2em #008E9B;}
+  50% { border: 2px  #2C73D2 solid; background-color: #4568DC;  box-shadow:  0 0 0 0.2em #845EC2;}
+  100% { border: 2px #0089BA solid; background-color: #0081CF;  box-shadow:  0 0 0 0.2em #008E9B;}
+}
+
 
 
 
@@ -89,7 +126,7 @@ p{
 .mouseY{
     width: 20px;
     height: 30px;
-    border: 2px black solid;
+    border: 2px rgb(255, 255, 255) solid;
     border-radius: 20px 20px;
     
     
@@ -98,7 +135,7 @@ p{
 .lineaMouse{
     width: 1px;
     height: 8px;
-    border: 2px black solid;
+    border: 2px rgb(255, 255, 255) solid;
     border-radius: 20px 20px;
     margin: 2px auto;
     display: block;
@@ -265,5 +302,7 @@ p{
     color: #000;
     font-family: 'Share Tech Mono', monospace;
   }
+
+  
 
   

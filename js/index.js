@@ -6,11 +6,11 @@ $(document).ready(function () {
 
 
   $(".portfolio-item button:eq(0)").on("click", function(e){
-    redirigir("https://indarkdev.000webhostapp.com/angular/angularlista/list")
+    download("./apps/savegaming.apk");
   })
 
   $(".portfolio-item button:eq(1)").on("click", function(e){
-    redirigir("https://indarkdev.000webhostapp.com/angular/angularlista/list")
+    redirigir("https://github.com/vanerb/Artistapp-PHP-JS")
   })
 
   $(".portfolio-item button:eq(2)").on("click", function(e){
@@ -18,16 +18,25 @@ $(document).ready(function () {
   })
 
   $(".portfolio-item button:eq(3)").on("click", function(e){
-    redirigir("https://indarkdev.000webhostapp.com/angular/angularlista/list")
+    redirigir("https://github.com/vanerb/AngularVideojuegosApp")
   })
 
   $(".portfolio-item button:eq(4)").on("click", function(e){
-    redirigir("https://indarkdev.000webhostapp.com/angular/angularlista/list")
+    redirigir("https://discord.com/api/oauth2/authorize?client_id=763008480504184872&permissions=8&scope=bot")
   })
 
   $(".portfolio-item button:eq(5)").on("click", function(e){
-    redirigir("https://indarkdev.000webhostapp.com/angular/angularlista/list")
+    redirigir("https://github.com/vanerb/LaravelPortfolio")
   })
+
+  function download(url) {
+    const a = document.createElement('a')
+    a.href = url
+    a.download = url.split('/').pop()
+    document.body.appendChild(a)
+    a.click()
+    document.body.removeChild(a)
+  }
  
 
 
