@@ -27,7 +27,13 @@ h1{
     color:azure
 }
 
+h2{
+  font-family: 'Roboto Mono', monospace;
+  font-size: 28px;
+}
+
 .linea{
+  
   border-right: 2px solid black;
   height: 100px;
   width: 1px;
@@ -46,6 +52,7 @@ h1{
 }
 
 .circulo{
+  
   width: 40px;
   height: 40px;
   border: 2px #0089BA solid;
@@ -247,6 +254,9 @@ h1{
     font-family: 'Share Tech Mono', monospace;
     margin: 5px;
   }
+  
+  
+  
 
   .container-title h1{
     font-size: 55px;
@@ -271,6 +281,13 @@ h1{
     border-radius: 50%;
     
 
+  }
+
+  .item-img{
+    border: 5px solid rgb(163, 191, 250);
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
   }
 
   .proyectos .portfolio-item{

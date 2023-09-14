@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  const phrases = ["Web developer", "Multiplatform developer", "Game developer", "Movile developer"];
+  const phrases = ["Web developer", "Multiplatform developer", "Game developer", "Mobile developer"];
   let currentPhraseIndex = 0;
   let currentText = "";
   let textIndex = 0;
@@ -28,6 +28,16 @@ $(document).ready(function () {
   $(".portfolio-item button:eq(5)").on("click", function(e){
     redirigir("https://github.com/vanerb/LaravelPortfolio")
   })
+
+
+  $(".social button:eq(0)").on("click", function(){
+    redirigir("https://github.com/vanerb");
+  })
+
+  $(".social button:eq(1)").on("click", function(){
+    redirigir("https://www.linkedin.com/in/vanesa-ribera-bautista-47969527a/");
+  })
+
 
   function download(url) {
     const a = document.createElement('a')
