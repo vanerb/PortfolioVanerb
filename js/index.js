@@ -5,39 +5,56 @@ $(document).ready(function () {
   let textIndex = 0;
 
 
-  $(".portfolio-item button:eq(0)").on("click", function(e){
-    download("./apps/savegaming.apk");
+
+
+  $(".portfolio-item button:eq(0)").on("click", function (e) {
+   
   })
 
-  $(".portfolio-item button:eq(1)").on("click", function(e){
-    redirigir("https://github.com/vanerb/Artistapp-PHP-JS")
+  $(".portfolio-item button:eq(1)").on("click", function (e) {
+   
   })
 
-  $(".portfolio-item button:eq(2)").on("click", function(e){
-    redirigir("https://indarkgames.itch.io/remember-me")
+  $(".portfolio-item button:eq(2)").on("click", function (e) {
+    redirect("https://indarkgames.itch.io/remember-me")
   })
 
-  $(".portfolio-item button:eq(3)").on("click", function(e){
-    redirigir("https://github.com/vanerb/AngularVideojuegosApp")
+  $(".portfolio-item button:eq(3)").on("click", function (e) {
+    redirect("https://github.com/vanerb/AngularVideojuegosApp")
   })
 
-  $(".portfolio-item button:eq(4)").on("click", function(e){
-    redirigir("https://discord.com/api/oauth2/authorize?client_id=763008480504184872&permissions=8&scope=bot")
+  $(".portfolio-item button:eq(4)").on("click", function (e) {
+    redirect("https://discord.com/api/oauth2/authorize?client_id=763008480504184872&permissions=8&scope=bot")
   })
 
-  $(".portfolio-item button:eq(5)").on("click", function(e){
-    redirigir("https://github.com/vanerb/LaravelPortfolio")
+  $(".portfolio-item button:eq(5)").on("click", function (e) {
+    redirect("https://github.com/vanerb/LaravelPortfolio")
   })
 
 
-  $(".social button:eq(0)").on("click", function(){
-    redirigir("https://github.com/vanerb");
+  $(".social button:eq(0)").on("click", function () {
+    redirect("https://github.com/vanerb");
   })
 
-  $(".social button:eq(1)").on("click", function(){
-    redirigir("https://www.linkedin.com/in/vanesa-ribera-bautista-47969527a/");
+  $(".social button:eq(1)").on("click", function () {
+    redirect("https://www.linkedin.com/in/vanesa-ribera-bautista-47969527a/");
   })
 
+
+  $('a.scroll-link').on('click', function (e) {
+    e.preventDefault();
+
+    var target = $(this.getAttribute('href'));
+    var headerHeight = $('#main-header').outerHeight(); 
+
+    if (target.length) {
+      var targetPosition = target.offset().top - headerHeight;
+
+      $('html, body').animate({
+        scrollTop: targetPosition
+      }, 0); 
+    }
+  });
 
   function download(url) {
     const a = document.createElement('a')
@@ -47,11 +64,11 @@ $(document).ready(function () {
     a.click()
     document.body.removeChild(a)
   }
- 
 
 
-  function redirigir(url){
-    window.location.href = url;
+  function redirect(url) {
+    open(url)
+   // window.location.href = url;
   }
 
 
@@ -72,24 +89,6 @@ $(document).ready(function () {
   }
 
   writeText();
-
-  $(window).on("scroll", function(){
-    //sacamos el desplazamiento actual de la página
-    var desplazamientoActual = $(document).scrollTop();
-    //accedemos al control de "ir arriba"
-    //compruebo si debo mostrar el botón
-    if(desplazamientoActual > 100 ){
-        $(".mouseY").fadeOut("slow");
-    }
-    //controlo si debo ocultar el botón
-    if(desplazamientoActual < 100){
-        $(".mouseY").fadeIn("slow");
-    }
-});
-  
-
-    
-  
 });
 
 
