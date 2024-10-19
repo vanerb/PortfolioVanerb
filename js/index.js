@@ -48,7 +48,7 @@ $(document).ready(function () {
     var headerHeight = $('#main-header').outerHeight(); 
 
     if (target.length) {
-      var targetPosition = target.offset().top - headerHeight;
+      var targetPosition = target.offset().top - headerHeight -300;
 
       $('html, body').animate({
         scrollTop: targetPosition
