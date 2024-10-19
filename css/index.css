@@ -1,102 +1,119 @@
 
 
-.text-anim{
-   
+.text-anim {
+
     margin: auto;
     display: block;
     font-family: 'Share Tech Mono', monospace;
     height: 20px;
 }
-.container{
+.container {
     overflow: hidden;
-    
+
 }
 
-p{
-  font-family: 'Roboto Mono', monospace;
-  color: azure;
+p {
+    font-family: 'Roboto Mono', monospace;
+    color: azure;
 }
 
-button{
+button {
     font-family: 'Share Tech Mono', monospace;
 }
 
-h1{
+h1 {
     font-family: 'Kanit', sans-serif;
     text-transform: uppercase;
-    color:azure
+    color: azure
 }
 
-h2{
-  font-family: 'Roboto Mono', monospace;
-  font-size: 28px;
+h2 {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 28px;
 }
 
-.linea{
-  
-  border-right: 2px solid black;
-  height: 100px;
-  width: 1px;
-  padding: 0;
-  margin: 30px auto 0 auto;
+.linea {
 
-}
-
-.nolinea{
-  
-  height: 100px;
-  width: 1px;
-  padding: 0;
-  margin: 30px auto 0 auto;
+    border-right: 2px solid black;
+    height: 100px;
+    width: 1px;
+    padding: 0;
+    margin: 30px auto 0 auto;
 
 }
 
-.circulo{
-  
-  width: 40px;
-  height: 40px;
-  border: 2px #0089BA solid;
-  box-shadow:  0 0 0 0.2em #008E9B;
-  border-radius: 50%;
-  margin-top: -40px;
-  margin-left: -20px;
-  background-color: #0081CF;
- animation: circulo 2s linear infinite ;
+.nolinea {
+
+    height: 100px;
+    width: 1px;
+    padding: 0;
+    margin: 30px auto 0 auto;
+
+}
+
+.circulo {
+
+    width: 40px;
+    height: 40px;
+    border: 2px #0089BA solid;
+    box-shadow: 0 0 0 0.2em #008E9B;
+    border-radius: 50%;
+    margin-top: -40px;
+    margin-left: -20px;
+    background-color: #0081CF;
+    animation: circulo 2s linear infinite;
+
+}
+.abilities-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
 
 }
 
 @keyframes circulo{
-  0% { border: 2px #0089BA solid; background-color: #0081CF;  box-shadow:  0 0 0 0.2em #008E9B;}
-  50% { border: 2px  #2C73D2 solid; background-color: #4568DC;  box-shadow:  0 0 0 0.2em #845EC2;}
-  100% { border: 2px #0089BA solid; background-color: #0081CF;  box-shadow:  0 0 0 0.2em #008E9B;}
+    0% {
+        border: 2px #0089BA solid;
+        background-color: #0081CF;
+        box-shadow: 0 0 0 0.2em #008E9B;
+    }
+    50% {
+        border: 2px  #2C73D2 solid;
+        background-color: #4568DC;
+        box-shadow: 0 0 0 0.2em #845EC2;
+    }
+    100% {
+        border: 2px #0089BA solid;
+        background-color: #0081CF;
+        box-shadow: 0 0 0 0.2em #008E9B;
+    }
 }
 
 
-
-
-.container-title{
+.container-title {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.container-description{
+.container-description {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.container-description button{
+.container-description button {
     background-color: white;
     border: 1px black solid;
     color: black;
 }
 
 
-
-.content-title{
+.content-title {
     height: 80vh;
     display: flex;
     flex-direction: column;
@@ -106,17 +123,17 @@ h2{
 
 }
 
-.content-body{
+.content-body {
     background-color: #C1E5FF;
     padding-bottom: 10px;
-    
+
 }
 
-.content-body p{
+.content-body p {
     color: black;
 }
 
-.mouse{
+.mouse {
     height: 30px;
     position: absolute;
     bottom: 0;
@@ -127,41 +144,49 @@ h2{
     padding: 10px;
     text-align: center;
     margin-bottom: 20px;
-   animation: fadeIn;
+    animation: fadeIn;
     animation-duration: 2s;
 }
-.mouseY{
+.mouseY {
     width: 20px;
     height: 30px;
     border: 2px rgb(255, 255, 255) solid;
     border-radius: 20px 20px;
-    
-    
+
+
 }
 
-.lineaMouse{
+.lineaMouse {
     width: 1px;
     height: 8px;
     border: 2px rgb(255, 255, 255) solid;
     border-radius: 20px 20px;
     margin: 2px auto;
     display: block;
-    animation: mouse 2s linear infinite ;
+    animation: mouse 2s linear infinite;
 }
 
 @keyframes mouse{
-    0% { opacity: 0; }
-    10% { transform: translateY(0); opacity: 1; }
-    100% { transform: translateY(8px); opacity: 0;}
-  }
+    0% {
+        opacity: 0;
+    }
+    10% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(8px);
+        opacity: 0;
+    }
+}
 
 .wave-container {  
     height: 0vh;
     background-color: rgba(32, 178, 170, 0);
     position: relative;
-  }
-  
-  .wave-container::before {   
+}
+
+.wave-container::before {
     content: "";
     width: 100%;
     height: 122px;
@@ -175,57 +200,52 @@ h2{
 
     animation: wave 10s linear infinite alternate-reverse;
 }
-  
-  @media(max-width:850px) {
+
+@media(max-width: 850px) {
     .wave-container::before {    
-      height: 61px
+        height: 61px
     }  
-  }
+}
 
-  .wave-container-anim{
+.wave-container-anim {
     animation: wave 10s linear infinite alternate-reverse;
-  }
+}
 
-  @keyframes wave-fixed{
-    from{
+@keyframes wave-fixed{
+    from {
         background-position: 0, 0;
     }
-    to{
+    to {
         background-position: 100% 100%;
     }
-  }
+}
 
-  @keyframes wave{
-    from{
+@keyframes wave{
+    from {
         background-position: 0, 0;
     }
-    to{
+    to {
         background-position: 100% 100%;
     }
-  }
+}
 
 
-
-
-
-  body{
+body {
     background: #4568DC;  
-    background: linear-gradient(to right, #845EC2, #2C73D2, #0081CF,#0089BA, #008E9B, #008F7A); 
+    background: linear-gradient(to right, #845EC2, #2C73D2, #0081CF, #0089BA, #008E9B, #008F7A);
     background-size: 200% 200%;
     animation: mov 3s linear infinite alternate;
 }
 
 
 @keyframes mov{
-    from{
+    from {
         background-position: 0, 0;
     }
-    to{
+    to {
         background-position: 100% 100%;
     }
 }
-
-  
 
 
 .nav-link::after {
@@ -239,13 +259,13 @@ h2{
     transform: scaleX(0); /* Inicialmente, la línea estará invisible */
     transform-origin: bottom right;
     transition: transform 0.3s ease; /* Efecto de transición suave */
-  }
-  
-  .nav-link:hover::after {
-    transform: scaleX(1); /* Muestra la línea al pasar el cursor sobre el elemento */
-  }
+}
 
-  .nav-link{
+.nav-link:hover::after {
+    transform: scaleX(1); /* Muestra la línea al pasar el cursor sobre el elemento */
+}
+
+.nav-link {
     text-decoration: none; /* Elimina la línea subrayada predeterminada */
     position: relative; /* Necesario para el posicionamiento absoluto */
     display: inline-block; /* Para que el elemento ocupe solo el ancho de su contenido */
@@ -253,94 +273,90 @@ h2{
     color: #000;
     font-family: 'Share Tech Mono', monospace;
     margin: 5px;
-  }
-  
-  
-  
+}
 
-  .container-title h1{
+
+.container-title h1 {
     font-size: 55px;
     animation: flipInY; /* referring directly to the animation's @keyframe declaration */
     animation-duration: 2s;
-  }
+}
 
-  .container-title p{
+.container-title p {
     font-size: 20px;
     animation: zoomIn; /* referring directly to the animation's @keyframe declaration */
     animation-duration: 2s;
-  }
+}
 
-  .container-title button{
+.container-title button {
     animation: fadeIn;
     animation-duration: 2s;
-  }
+}
 
 
-  .perfil{
+.perfil {
     border: 5px solid rgb(163, 191, 250);
     border-radius: 50%;
-    
 
-  }
 
-  #main-header{
+}
+
+#main-header {
     height: 42x;
     padding: 16px;
-  }
+}
 
-  .item-img-back{
+.item-img-back {
     position: relative;
     width: 100%;
     height: 200px;
     display: flex;
-    justify-content: center;  /* Centra horizontalmente */
-    align-items: center;      /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
     overflow: hidden;
     border-radius: 10px;
-  }
-  .item-img{
+}
+.item-img {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);  /* Mueve la imagen al centro */
+    transform: translate(-50%, -50%); /* Mueve la imagen al centro */
     width: 100%;
     height: 100%;
-    object-fit: cover;  /* La imagen se adapta al tamaño del contenedor */
+    object-fit: cover; /* La imagen se adapta al tamaño del contenedor */
     z-index: -1;
-  }
+}
 
 
-
-  .proyectos .portfolio-item{
+.proyectos .portfolio-item {
     text-align: center;
     padding: 20px;
-  }
+}
 
-  .proyectos .portfolio-item button{
+.proyectos .portfolio-item button {
     display: block;
     margin: auto;
     background-color: transparent;
     border: 1px solid black;
     font-family: 'Share Tech Mono', monospace;
-    
-  }
 
-  .proyectos .portfolio-item:hover{
-    
-    animation: pulse ;
+}
+
+.portfolio-item:hover {
+
+    animation: pulse;
     animation-duration: 1s;
-    
-  }
 
-  .proyectos .portfolio-item button:hover{
+}
+
+.proyectos .portfolio-item button:hover {
     display: block;
     margin: auto;
     background-color: white;
     border: 1px solid black;
     color: #000;
     font-family: 'Share Tech Mono', monospace;
-  }
+}
 
-  
 
-  
+

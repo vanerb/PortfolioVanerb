@@ -12,7 +12,7 @@ $(document).ready(function () {
   })
 
   $(".portfolio-item button:eq(1)").on("click", function (e) {
-   
+    redirect('https://github.com/vanerb/Artistapp-PHP-JS')
   })
 
   $(".portfolio-item button:eq(2)").on("click", function (e) {
